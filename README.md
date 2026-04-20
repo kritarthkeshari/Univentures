@@ -1,4 +1,4 @@
-# 🚀 UniVentures – A Collaborative Pitching Platform
+#  UniVentures – A Collaborative Pitching Platform
 
 > A platform where ideas meet the people who can build them.
 
@@ -6,7 +6,7 @@ UniVentures is a frontend-based web application designed to help **entrepreneurs
 
 ---
 
-## 🌟 Overview
+## Overview
 
 Many students and early-stage founders have great ideas but lack:
 
@@ -23,7 +23,7 @@ Many students and early-stage founders have great ideas but lack:
 
 ---
 
-## 🎯 Problem Statement
+## Problem Statement
 
 - ❌ No proper platform for student startup collaboration  
 - ❌ Difficulty in finding team members (devs/designers/marketers)  
@@ -32,30 +32,30 @@ Many students and early-stage founders have great ideas but lack:
 
 ---
 
-## 💡 Solution
+##  Solution
 
 A web platform where users can:
 
-- 🚀 Upload startup ideas (pitch)
-- 🔍 Explore other startup ideas
-- 🤝 Connect with collaborators
-- 📊 Manage ideas via dashboard
+- Upload startup ideas (pitch)
+- Explore other startup ideas
+-  Connect with collaborators
+- Manage ideas via dashboard
 
 ---
 
-## 👥 User Roles
+##  User Roles
 
-- 👨‍💼 Entrepreneur  
-- 💰 Investor  
-- 👨‍💻 Developer  
-- 🎨 Designer  
-- 📢 Marketer  
+- Entrepreneur  
+-  Investor  
+-  Developer  
+-  Designer  
+-  Marketer  
 
 ---
 
-## 🔥 Features
+##  Features
 
-### 1️⃣ Startup Pitch Creation
+### 1️Startup Pitch Creation
 - Title
 - Problem statement
 - Solution
@@ -64,7 +64,7 @@ A web platform where users can:
 - Funding requirement
 - Pitch video / PDF (UI placeholder)
 
-### 2️⃣ Explore Startups
+###  Explore Startups
 - Filter by domain:
   - AI
   - Fintech
@@ -72,22 +72,22 @@ A web platform where users can:
   - EdTech
   - E-commerce
 
-### 3️⃣ Collaboration System
+###  Collaboration System
 - Follow startups
 - Send collaboration requests
 - Save ideas
 
-### 4️⃣ Dashboard
+###  Dashboard
 - My Ideas
 - Requests
 - Saved startups
 
-### 5️⃣ Authentication UI (Frontend)
+###  Authentication UI (Frontend)
 - Login / Signup pages
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 ### Frontend
 - HTML  
@@ -101,7 +101,7 @@ A web platform where users can:
 - LocalStorage / Mock JSON (Data Simulation)
 
 ---
-## ⚙️ How to Run the Project
+##  How to Run the Project
 
 ```bash
 # Clone the repository
