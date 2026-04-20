@@ -1,8 +1,8 @@
-# 🚀 StartupConnect – A Collaborative Pitching Platform
+# 🚀 UniVentures – A Collaborative Pitching Platform
 
 > A platform where ideas meet the people who can build them.
 
-StartupConnect is a frontend-based web application designed to help **entrepreneurs, developers, designers, and investors** connect, collaborate, and grow startup ideas together.
+UniVentures is a frontend-based web application designed to help **entrepreneurs, developers, designers, and investors** connect, collaborate, and grow startup ideas together.
 
 ---
 
@@ -14,7 +14,7 @@ Many students and early-stage founders have great ideas but lack:
 - Access to investors
 - Early feedback on their ideas
 
-**StartupConnect solves this by providing:**
+**UniVentures solves this by providing:**
 
 ✔ Idea showcasing platform  
 ✔ Team formation opportunities  
@@ -132,10 +132,10 @@ src/
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/startupconnect.git
+git clone https://github.com/your-username/univentures.git
 
 # Go into the project folder
-cd startupconnect
+cd univentures
 
 # Install dependencies
 npm install
