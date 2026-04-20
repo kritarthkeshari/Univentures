@@ -1,16 +1,144 @@
-# React + Vite
+# 🚀 StartupConnect – A Collaborative Pitching Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> A platform where ideas meet the people who can build them.
 
-Currently, two official plugins are available:
+StartupConnect is a frontend-based web application designed to help **entrepreneurs, developers, designers, and investors** connect, collaborate, and grow startup ideas together.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🌟 Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Many students and early-stage founders have great ideas but lack:
 
-## Expanding the ESLint configuration
+- A team to build the product
+- Access to investors
+- Early feedback on their ideas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**StartupConnect solves this by providing:**
+
+✔ Idea showcasing platform  
+✔ Team formation opportunities  
+✔ Networking with like-minded people  
+✔ Early-stage collaboration  
+
+---
+
+## 🎯 Problem Statement
+
+- ❌ No proper platform for student startup collaboration  
+- ❌ Difficulty in finding team members (devs/designers/marketers)  
+- ❌ Limited access to early feedback  
+- ❌ Lack of visibility for new ideas  
+
+---
+
+## 💡 Solution
+
+A web platform where users can:
+
+- 🚀 Upload startup ideas (pitch)
+- 🔍 Explore other startup ideas
+- 🤝 Connect with collaborators
+- 📊 Manage ideas via dashboard
+
+---
+
+## 👥 User Roles
+
+- 👨‍💼 Entrepreneur  
+- 💰 Investor  
+- 👨‍💻 Developer  
+- 🎨 Designer  
+- 📢 Marketer  
+
+---
+
+## 🔥 Features
+
+### 1️⃣ Startup Pitch Creation
+- Title
+- Problem statement
+- Solution
+- Market details
+- Team info
+- Funding requirement
+- Pitch video / PDF (UI placeholder)
+
+### 2️⃣ Explore Startups
+- Filter by domain:
+  - AI
+  - Fintech
+  - Health
+  - EdTech
+  - E-commerce
+
+### 3️⃣ Collaboration System
+- Follow startups
+- Send collaboration requests
+- Save ideas
+
+### 4️⃣ Dashboard
+- My Ideas
+- Requests
+- Saved startups
+
+### 5️⃣ Authentication UI (Frontend)
+- Login / Signup pages
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- HTML  
+- CSS  
+- JavaScript  
+- React  
+
+### Tools
+- Figma (UI Design)  
+- Git & GitHub (Version Control)  
+- LocalStorage / Mock JSON (Data Simulation)
+
+---
+
+## 🧱 Project Structure
+
+
+src/
+│
+├── components/
+│ ├── Navbar.jsx
+│ ├── StartupCard.jsx
+│ ├── PitchForm.jsx
+│ └── Dashboard.jsx
+│
+├── pages/
+│ ├── Home.jsx
+│ ├── Explore.jsx
+│ ├── Profile.jsx
+│ └── Login.jsx
+│
+├── data/
+│ └── mockData.json
+│
+├── App.js
+└── index.js
+
+
+---
+
+## ⚙️ How to Run the Project
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/startupconnect.git
+
+# Go into the project folder
+cd startupconnect
+
+# Install dependencies
+npm install
+
+# Run the app
+npm start
