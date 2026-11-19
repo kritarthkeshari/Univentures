@@ -1,18 +1,6 @@
-// ========================================
-// models.js — Mongoose schemas & models for UniVenture
-//
-// Documents use human-readable string _id values (e.g. "startup-001",
-// "user-001") to stay compatible with the existing frontend and seed data.
-// Nested/embedded documents (comments, founders) and arrays (tags, voters,
-// savers, rolesNeeded) are modelled directly — this is the nested-document /
-// array structure the course's MongoDB units build queries against.
-// ========================================
-
 import mongoose from 'mongoose';
 
 const { Schema, model } = mongoose;
-
-// ---------- Embedded sub-documents ----------
 
 const commentSchema = new Schema(
   {
@@ -34,11 +22,9 @@ const founderSchema = new Schema(
   { _id: false }
 );
 
-// ---------- Users ----------
-
 const userSchema = new Schema(
   {
-    _id: { type: String }, // e.g. "user-001"
+    _id: { type: String },
     name: { type: String, required: true },
     email: { type: String, required: true, unique: true, lowercase: true },
     passwordHash: { type: String, required: true },
@@ -56,11 +42,9 @@ const userSchema = new Schema(
   { timestamps: true }
 );
 
-// ---------- Startups ----------
-
 const startupSchema = new Schema(
   {
-    _id: { type: String }, // e.g. "startup-001"
+    _id: { type: String },
     ownerId: { type: String, default: null },
     title: { type: String, required: true },
     tagline: { type: String, default: '' },
@@ -84,14 +68,11 @@ const startupSchema = new Schema(
     demoVideo: { type: String, default: '' },
     postedAt: { type: String, required: true },
     isTrending: { type: Boolean, default: false },
-    // Who has voted / saved — array membership tracks per-user state.
     voters: { type: [String], default: [] },
     savers: { type: [String], default: [] },
   },
   { timestamps: false }
 );
-
-// ---------- Collaboration requests ----------
 
 const requestSchema = new Schema(
   {
@@ -108,8 +89,6 @@ const requestSchema = new Schema(
   { timestamps: false }
 );
 
-// ---------- Activity feed ----------
-
 const activitySchema = new Schema(
   {
     _id: { type: String },
@@ -121,6 +100,11 @@ const activitySchema = new Schema(
   },
   { timestamps: false }
 );
+
+startupSchema.index({ domain: 1, postedAt: -1 });
+startupSchema.index({ votes: -1 });
+startupSchema.index({ tags: 1 });
+requestSchema.index({ toOwnerId: 1, date: -1 });
 
 export const User = model('User', userSchema);
 export const Startup = model('Startup', startupSchema);
