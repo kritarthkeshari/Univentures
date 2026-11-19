@@ -8,9 +8,13 @@ import { DEMO_USER, STARTUPS, REQUESTS, ACTIVITY } from './seedData.js';
 let connected = false;
 
 export async function connectDB() {
-  if (connected) return mongoose.connection;
-  await mongoose.connect(config.mongoUri, { dbName: config.dbName });
-  connected = true;
+  if (mongoose.connection.readyState === 1) {
+    return mongoose.connection;
+  }
+  await mongoose.connect(config.mongoUri, {
+    dbName: config.dbName,
+    serverSelectionTimeoutMS: 5000,
+  });
   await seedIfEmpty();
   return mongoose.connection;
 }
