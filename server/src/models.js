@@ -54,7 +54,7 @@ const startupSchema = new Schema(
     solution: { type: String, default: '' },
     market: { type: String, default: '' },
     traction: { type: String, default: '' },
-    fundingAsk: { type: Number, default: 0 },
+    fundingAsk: { type: Number, default: 0, min: 0 },
     fundingType: { type: String, default: 'Equity' },
     marketSize: { type: String, default: '' },
     revenueModel: { type: String, default: 'Other' },
@@ -83,7 +83,11 @@ const requestSchema = new Schema(
     pitchId: { type: String, default: null },
     fromUserId: { type: String, default: null },
     toOwnerId: { type: String, default: null },
-    status: { type: String, default: 'pending' },
+    status: {
+      type: String,
+      enum: ['pending', 'accepted', 'declined'],
+      default: 'pending',
+    },
     date: { type: String, required: true },
   },
   { timestamps: false }
