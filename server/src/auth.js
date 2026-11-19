@@ -46,7 +46,7 @@ export async function optionalAuth(req, _res, next) {
         req.userId = user._id;
       }
     } catch {
-      // Ignore bad tokens for optional routes.
+      
     }
   }
   next();
