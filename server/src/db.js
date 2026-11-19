@@ -20,8 +20,15 @@ export async function connectDB() {
 }
 
 export async function seedIfEmpty() {
-  const count = await User.countDocuments();
-  if (count > 0) return false;
+  const [userCount, startupCount, requestCount, activityCount] = await Promise.all([
+    User.countDocuments(),
+    Startup.countDocuments(),
+    Request.countDocuments(),
+    Activity.countDocuments(),
+  ]);
+  if (userCount > 0 && startupCount > 0 && requestCount > 0 && activityCount > 0) {
+    return false;
+  }
   await runSeed();
   return true;
 }
