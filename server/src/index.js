@@ -11,7 +11,7 @@ import * as db from './db.js';
 
 const app = express();
 
-app.use(requestLogger);                 // log every request (method, url, status, time)
+app.use(requestLogger);                 
 app.use(cors({ origin: config.clientOrigins, credentials: true }));
 app.use(express.json({ limit: '1mb' }));
 

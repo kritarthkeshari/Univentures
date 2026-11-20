@@ -16,7 +16,7 @@ function readToken(req) {
   return null;
 }
 
-// Attaches req.user / req.userId when a valid token is present; otherwise 401.
+
 export function requireAuth(req, res, next) {
   const token = readToken(req);
   if (!token) return res.status(401).json({ error: 'Authentication required' });
@@ -34,7 +34,7 @@ export function requireAuth(req, res, next) {
   });
 }
 
-// Attaches req.user / req.userId when present, but never blocks the request.
+
 export async function optionalAuth(req, _res, next) {
   const token = readToken(req);
   if (token) {
@@ -46,7 +46,7 @@ export async function optionalAuth(req, _res, next) {
         req.userId = user._id;
       }
     } catch {
-      // Ignore bad tokens for optional routes.
+      
     }
   }
   next();
